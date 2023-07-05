@@ -1,4 +1,4 @@
-package tdd.approach.old;
+package selenium.problems.ui;
 
 import java.time.Duration;
 import java.util.List;

@@ -1,4 +1,4 @@
-package tdd.approach.old;
+package selenium.problems.ui;
 
 public class LaunchSelenium {
 

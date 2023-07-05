@@ -14,8 +14,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import demoqa.DemoQAOR;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import selenium.problems.DemoQAOR;
 
 public class Webtable {
 

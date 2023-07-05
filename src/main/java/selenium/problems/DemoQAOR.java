@@ -1,4 +1,4 @@
-package demoqa;
+package selenium.problems;
 
 import org.openqa.selenium.By;
 

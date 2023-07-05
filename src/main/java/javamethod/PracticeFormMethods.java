@@ -220,6 +220,7 @@ public class PracticeFormMethods {
 
 		}
 	}
+
 	public static void Submit(WebDriver driver) throws InterruptedException {
 		try {
 			WebElement element = driver.findElement(PracticeFormOR.SUBMIT);
