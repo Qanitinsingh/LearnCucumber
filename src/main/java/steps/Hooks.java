@@ -28,6 +28,7 @@ public class Hooks {
 	@After
 	public void tearDown(Scenario scenario) {
 		try {
+			
 			String screenshotName = scenario.getName().replaceAll(" ", "_");
 			if (scenario.isFailed()) {
 				TakesScreenshot ts = (TakesScreenshot) driver;

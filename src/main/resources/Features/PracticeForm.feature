@@ -4,7 +4,7 @@ Feature: Student Register Form
   I want to register into portal 
   So that I can register myself
 
-  @UITEST
+  @UITEST @SmokeTest @Functional @Regression
   Scenario Outline: Verify the Student register form
     Given User is on registration page
     And User enters firstName as "Nitin", Last name as "Singh" and email as "Nitin@gmail.com"

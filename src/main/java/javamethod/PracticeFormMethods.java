@@ -1,6 +1,7 @@
 package javamethod;
 
 import java.awt.AWTException;
+import java.sql.SQLException;
 import java.time.Duration;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -23,7 +24,7 @@ public class PracticeFormMethods {
 
 	final static Logger logger = LogManager.getLogger(PracticeFormMethods.class);
 
-	public static void launchBrowser(WebDriver driver) throws InterruptedException {
+	public static  void launchBrowser(WebDriver driver) throws InterruptedException {
 		try {
 			driver.get("https://demoqa.com/automation-practice-form");
 		} catch (TimeoutException e) {
