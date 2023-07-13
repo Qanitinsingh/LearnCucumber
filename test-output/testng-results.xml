@@ -1,47 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-04T17:51:53 IST" name="Default suite" finished-at="2023-07-04T17:52:27 IST" duration-ms="34013">
+  <suite started-at="2023-07-13T18:22:24 IST" name="Default suite" finished-at="2023-07-13T18:22:38 IST" duration-ms="14009">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunCuke@67d18ed7]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-07-04T17:51:53 IST" name="Default test" finished-at="2023-07-04T17:52:27 IST" duration-ms="34013">
-      <class name="runner.RunCuke">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.RunCuke@67d18ed7]" started-at="2023-07-04T17:51:53 IST" name="setUpClass" finished-at="2023-07-04T17:51:54 IST" duration-ms="1453" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@76cf91c9]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2023-07-13T18:22:24 IST" name="Default test" finished-at="2023-07-13T18:22:38 IST" duration-ms="14009">
+      <class name="seleniu.inetractions.Resizable">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:seleniu.inetractions.Resizable@12d2ce03]" started-at="2023-07-13T18:22:24 IST" name="launchBrowser" finished-at="2023-07-13T18:22:36 IST" duration-ms="11981" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunCuke@67d18ed7]" started-at="2023-07-04T17:51:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-04T17:52:25 IST" duration-ms="30902" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify the Student register form"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Student Register Form"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="resizable1()[pri:0, instance:seleniu.inetractions.Resizable@12d2ce03]" started-at="2023-07-13T18:22:36 IST" name="resizable1" finished-at="2023-07-13T18:22:37 IST" duration-ms="496" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.RunCuke@67d18ed7]" started-at="2023-07-04T17:52:25 IST" name="tearDownClass" finished-at="2023-07-04T17:52:27 IST" duration-ms="1381" status="PASS">
+        </test-method> <!-- resizable1 -->
+        <test-method signature="resizable2()[pri:0, instance:seleniu.inetractions.Resizable@12d2ce03]" started-at="2023-07-13T18:22:37 IST" name="resizable2" finished-at="2023-07-13T18:22:38 IST" duration-ms="1375" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- runner.RunCuke -->
+        </test-method> <!-- resizable2 -->
+      </class> <!-- seleniu.inetractions.Resizable -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
