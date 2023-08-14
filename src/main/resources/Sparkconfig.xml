@@ -30,6 +30,7 @@
 			<![CDATA[
                 $(document).ready(function() {
    					 $(".logo-content").hide();
+   					  <img src='.//TestData//logo-final-color.png' />
    					 $(".logo-container").html("Nitin");});]]>
 		</scripts>
 		<!-- custom styles -->

@@ -8,6 +8,7 @@ import java.util.NoSuchElementException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -16,7 +17,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import pageobjects.LoginOR;
 import pageobjects.PracticeFormOR;
+import pageobjects.RegisterOR;
 
 public class PracticeFormMethods {
 
@@ -24,9 +28,9 @@ public class PracticeFormMethods {
 
 	final static Logger logger = LogManager.getLogger(PracticeFormMethods.class);
 
-	public static  void launchBrowser(WebDriver driver) throws InterruptedException {
+	public static void launchBrowser(WebDriver driver , String url) throws InterruptedException {
 		try {
-			driver.get("https://demoqa.com/automation-practice-form");
+			driver.get(url);
 		} catch (TimeoutException e) {
 			logger.info("URL is taking time to load", e);
 		}
@@ -36,6 +40,7 @@ public class PracticeFormMethods {
 	public static void enterFnameLnameEmail(WebDriver driver, String fname, String lname, String email)
 			throws Throwable {
 		try {
+//driver.findElement(RegisterOR.SIGNUP_FIRSTNAME).sendKeys("Supriya");
 			driver.findElement(PracticeFormOR.FIRSTNAME).sendKeys(fname);
 			driver.findElement(PracticeFormOR.LASTTNAME).sendKeys(lname);
 			driver.findElement(PracticeFormOR.EMAIL).sendKeys(email);
@@ -98,13 +103,12 @@ public class PracticeFormMethods {
 			Actions actions = new Actions(driver);
 			Thread.sleep(1000);
 			actions.moveToElement(element).click().build().perform();
-
 		} catch (NoSuchElementException e) {
-			System.out.println("Unable to locate element" + e);
-		} catch (TimeoutException e) {
-			e.printStackTrace();
-
+			// TODO: handle exception
 		}
+			
+
+	
 	}
 
 	public static void autoSuggestionDropdown(WebDriver driver, String sub) throws InterruptedException, AWTException {

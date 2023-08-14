@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import javamethod.PracticeFormMethods;
+import selenium.alert.frame.window.HandleAlerts;
 
 public class PracticeFormSteps {
 	private WebDriver driver;
@@ -18,9 +19,9 @@ public class PracticeFormSteps {
 
 	}
 
-	@Given("User is on registration page")
-	public void user_is_on_registration_page() throws InterruptedException {
-		PracticeFormMethods.launchBrowser(driver);
+	@Given("User is on registration page {string}")
+	public void user_is_on_registration_page(String str) throws InterruptedException {
+		PracticeFormMethods.launchBrowser(driver, str );
 
 	}
 
@@ -40,6 +41,7 @@ public class PracticeFormSteps {
 	@When("Enter Mobile number as {string}")
 	public void enter_mobile_number_as(String mobile) throws InterruptedException {
 		PracticeFormMethods.enterPhone(driver, mobile);
+		
 
 	}
 

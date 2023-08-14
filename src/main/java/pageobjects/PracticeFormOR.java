@@ -4,7 +4,8 @@ import org.openqa.selenium.By;
 
 public class PracticeFormOR {
 
-	public static final By FIRSTNAME = By.id("firstName");
+	public static final By FIRSTNAME= By.id("firstName");
+	
 	public static final By LASTTNAME = By.id("lastName");
 	public static final By EMAIL = By.id("userEmail");
 	public static final By PHONE = By.id("userNumber");

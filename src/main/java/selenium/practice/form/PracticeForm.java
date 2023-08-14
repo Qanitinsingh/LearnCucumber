@@ -32,11 +32,12 @@ public class PracticeForm {
 	final static Logger logger = LogManager.getLogger(PracticeForm.class);
 	@BeforeTest
 	public void launchBrowser() throws InterruptedException {
+		
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions cr = new ChromeOptions();
 		cr.addArguments("--remote-allow-origins=*");
 		cr.addArguments("--force-device-scale-factor=0.5");
-		// cr.addArguments("--Headless");
+		
 		driver = new ChromeDriver(cr);
 		driver.get("https://demoqa.com/automation-practice-form");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
@@ -50,31 +51,19 @@ public class PracticeForm {
 	public void enterData() throws InterruptedException, AWTException {
 		try {
 			
-			String fname= "Nitin";
-
+		
 			List<String> formData = new ArrayList();
-			formData.add(0, "Nitin");
+			formData.add(0, "Rajesh");
 			formData.add(1, "Singh");
 			formData.add(2, "Nitin@gmail.com");
 			formData.add(3, "8557037939");
 			formData.add(4, "SBP Sec 116 Mohali");
-			
-
-//			driver.findElement(By.id("firstName")).sendKeys("Supriya"); // 1 way 
-//			
-//			driver.findElement(By.id("firstName")).sendKeys(name); //2 way
-//			
-//			driver.findElement(DemoORPractice.FNAME).sendKeys(name);
-//			
-		//	driver.findElement(By.id("firstName")).sendKeys(fname);
-			
-			
-			
-			driver.findElement(By.id("firstName")).sendKeys(formData.get(0));
-			driver.findElement(By.id("lastName")).sendKeys(formData.get(1));
-			driver.findElement(By.id("userEmail")).sendKeys(formData.get(2));
-			driver.findElement(By.id("userNumber")).sendKeys(formData.get(3));
-			driver.findElement(By.id("currentAddress")).sendKeys(formData.get(4));
+		
+			driver.findElement(PracticeFormOR.FIRSTNAME).sendKeys(formData.get(0));
+			driver.findElement(PracticeFormOR.LASTTNAME).sendKeys(formData.get(1));
+			driver.findElement(PracticeFormOR.EMAIL).sendKeys(formData.get(2));
+			driver.findElement(PracticeFormOR.PHONE).sendKeys(formData.get(3));
+			driver.findElement(PracticeFormOR.CURRENTADDRESS).sendKeys(formData.get(4));
 
 		} catch (NoSuchElementException e) {
 			System.out.println("Unable to locate element" + e);
@@ -108,7 +97,7 @@ public class PracticeForm {
 	}
 
 	@Test(priority = 2)
-	public void selectGender() throws AWTException {
+	public static void selectGender() throws AWTException {
 		try {
 
 			WebElement element = driver.findElement(PracticeFormOR.GENDER_MALE);

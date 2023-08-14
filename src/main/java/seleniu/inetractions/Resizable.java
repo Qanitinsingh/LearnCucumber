@@ -46,7 +46,7 @@ public class Resizable {
 		WebElement ele = driver.findElement(By.cssSelector(".resizable-nolimit .react-resizable-handle-se"));
 
 		Actions ac = new Actions(driver);
-		ac.dragAndDropBy(ele, 500, 800).perform();
+		ac.dragAndDropBy(ele, 1215, 380).perform();
 
 		driver.quit();
 	}

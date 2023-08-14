@@ -14,6 +14,8 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+
+
 public class DragAndDrop {
 	public static WebDriver driver;
 
@@ -22,6 +24,7 @@ public class DragAndDrop {
 
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions cr = new ChromeOptions();
+		
 		cr.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(cr);
 		driver.manage().window().maximize();
