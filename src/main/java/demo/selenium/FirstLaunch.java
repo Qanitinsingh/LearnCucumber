@@ -23,18 +23,10 @@ public class FirstLaunch {
 		driver = new ChromeDriver(obj);
 		driver.get("https://demoqa.com/automation-practice-form");
 		// driver.manage().window().maximize();
-		driver.manage().window().fullscreen();
+		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 
 	}
 
-	@Test
-	public void matchHeading(String str) {
-
-		String heading = driver.findElement(By.cssSelector(".practice-form-wrapper h5")).getText();
-		System.out.println(heading);
-
-		Assert.assertEquals(heading, str);
-	}
-
+	
 }

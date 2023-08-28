@@ -47,7 +47,7 @@ public class PracticeFormSteps {
 
 	@When("User Enters Subject as {string}, Hobbies as {string}, Select Date and address as {string}")
 	public void enter_date_and(String sub, String hob, String address) throws InterruptedException, AWTException {
-		PracticeFormMethods.autoSuggestionDropdown(driver, sub);
+		PracticeFormMethods.enterSubject(driver, sub);
 		PracticeFormMethods.selectHobbies(driver, hob);
 		PracticeFormMethods.selectDate(driver);
 		PracticeFormMethods.enteraddress(driver, address);

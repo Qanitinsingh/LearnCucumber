@@ -28,7 +28,7 @@ public class PracticeFormMethods {
 
 	final static Logger logger = LogManager.getLogger(PracticeFormMethods.class);
 
-	public static void launchBrowser(WebDriver driver , String url) throws InterruptedException {
+	public static void launchBrowser(WebDriver driver, String url) throws InterruptedException {
 		try {
 			driver.get(url);
 		} catch (TimeoutException e) {
@@ -63,15 +63,12 @@ public class PracticeFormMethods {
 
 			logger.info("TimeoutException in CURRENTADDRESS on registration form", e);
 		}
-		logger.info("enteraddress is executed successfully on Practice CS form");
+		logger.info("enteraddress is executed successfully on Student form");
 	}
 
-	public static void enterPhone(WebDriver driver, String Phone) throws InterruptedException {
+	public static void enterPhone(WebDriver driver, String Phonenumber) throws InterruptedException {
 		try {
-			driver.findElement(PracticeFormOR.PHONE).sendKeys(Phone);
-
-//			driver.findElement(By.id("currentAddress")).sendKeys(formData.get(4));
-
+			driver.findElement(PracticeFormOR.PHONE).sendKeys(Phonenumber);
 		} catch (NoSuchElementException e) {
 			System.out.println("Unable to locate element" + e);
 		} catch (TimeoutException e) {
@@ -83,11 +80,10 @@ public class PracticeFormMethods {
 	public static void selectGender(WebDriver driver) throws AWTException {
 		try {
 
-			WebElement element = driver.findElement(PracticeFormOR.GENDER_MALE);
+			WebElement gender = driver.findElement(PracticeFormOR.GENDER_FEMALE);
 
 			Actions actions = new Actions(driver);
-
-			actions.moveToElement(element).click().build().perform();
+			actions.moveToElement(gender).click().build().perform();
 
 		} catch (NoSuchElementException e) {
 			System.out.println("Unable to locate element" + e);
@@ -106,12 +102,10 @@ public class PracticeFormMethods {
 		} catch (NoSuchElementException e) {
 			// TODO: handle exception
 		}
-			
 
-	
 	}
 
-	public static void autoSuggestionDropdown(WebDriver driver, String sub) throws InterruptedException, AWTException {
+	public static void enterSubject(WebDriver driver, String sub) throws InterruptedException, AWTException {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 

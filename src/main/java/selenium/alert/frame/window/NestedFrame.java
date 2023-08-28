@@ -49,11 +49,13 @@ public class NestedFrame {
 		String frame2Text = frame2Element.getText();
 		System.out.println("Frame2 is :" + frame2Text);
 		
-	// Use to switch back to the default content 	
-	//	driver.switchTo().defaultContent();
+	//Use to switch back to the default content 	
+		driver.switchTo().defaultContent();
+		
+		driver.findElement(By.cssSelector("img[src='/images/Toolsqa.jpg']")).click();
 		
 		
-		
+		driver.quit();
 	}
 
 }

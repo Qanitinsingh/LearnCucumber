@@ -9,9 +9,10 @@ public class PracticeFormOR {
 	public static final By LASTTNAME = By.id("lastName");
 	public static final By EMAIL = By.id("userEmail");
 	public static final By PHONE = By.id("userNumber");
-	public static final By CURRENTADDRESS = By.id("userNumber");
+	public static final By CURRENTADDRESS = By.id("currentAddress");
 
 	public static final By GENDER_MALE = By.id("gender-radio-1");
+	public static final By GENDER_FEMALE = By.id("gender-radio-2");
 	public static final By AUTOSUGGESTION = By.cssSelector(".subjects-auto-complete__value-container input");
 
 	public static final By AUTOSUGGESTION_OPTIONS = By.xpath("//div[@id='react-select-2-option-0']");

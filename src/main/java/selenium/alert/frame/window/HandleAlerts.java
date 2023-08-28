@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -71,6 +72,9 @@ public class HandleAlerts {
 			driver.switchTo().alert().sendKeys(str);
 			driver.switchTo().alert().accept();
 		} catch (NoAlertPresentException e) {
+			// TODO: handle exception
+		}
+		catch (NoSuchElementException e) {
 			// TODO: handle exception
 		}
 		

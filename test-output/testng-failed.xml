@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="selenium.practice.form.PracticeForm">
+      <class name="demo.selenium.FirstLaunch">
         <methods>
-          <include name="confirmRegister"/>
+          <include name="matchHeading"/>
           <include name="launchBrowser"/>
-          <include name="selectcity"/>
-          <include name="selectState"/>
         </methods>
-      </class> <!-- selenium.practice.form.PracticeForm -->
+      </class> <!-- demo.selenium.FirstLaunch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

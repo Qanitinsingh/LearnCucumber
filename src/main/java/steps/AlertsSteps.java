@@ -3,7 +3,9 @@ package steps;
 import org.openqa.selenium.WebDriver;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import javamethod.PracticeFormMethods;
 import selenium.alert.frame.window.HandleAlerts;
 
 public class AlertsSteps {
@@ -14,7 +16,11 @@ public class AlertsSteps {
 		driver = Hooks.driver;
 
 	}
-	
+	@Given("User is on Alert page {string}")
+	public void user_is_on_registration_page(String str) throws InterruptedException {
+		PracticeFormMethods.launchBrowser(driver, str );
+
+	}
 	
 	@When("User clicks on the Simple Alert")
 	public void user_clicks_on_the_simple_alert() {

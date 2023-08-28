@@ -6,7 +6,7 @@ So that I can automate in future
 
 @Urgent
 Scenario: Handle multiple types of Alert
- Given User is on registration page "https://demoqa.com/alerts"
+ Given User is on Alert page "https://demoqa.com/alerts"
  When User clicks on the Simple Alert 
  And User clicks on the time based alert
  And User clicks on the confirmation alert 
