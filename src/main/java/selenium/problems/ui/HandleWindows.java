@@ -34,7 +34,7 @@ public class HandleWindows {
 	public void clickWindow() throws InterruptedException {
 		driver.findElement(GlobalOR.SWICTH_MENU).click();
 		List<WebElement> value = driver.findElements(GlobalOR.SWICTH_TO_OPTIONS);
-		for (int i = 0; i <= value.size(); i++) {
+		for (int i = 0; i <= value.size(); ) {
 			value.get(1).click();
 			driver.navigate().to("https://demo.automationtesting.in/Windows.html");
 			break;

@@ -41,7 +41,7 @@ public class MultiSelect {
 		ac.moveToElement(dropdown).click().build().perform();
 
 		List<WebElement> tabs = driver.findElements(By.className("css-yt9ioa-option"));
-		for (int i = 1; i <= tabs.size(); i++) {
+		for (int i = 1; i <= tabs.size();) {
 			tabs.get(i).click();
 			break;
 
@@ -56,7 +56,7 @@ public class MultiSelect {
 		ac.moveToElement(dropdown).click().build().perform();
 
 		List<WebElement> tabs = driver.findElements(By.className("css-yt9ioa-option"));
-		for (int i = 1; i <= tabs.size(); i++) {
+		for (int i = 1; i <= tabs.size();) {
 			tabs.get(i).click();
 			break;
 
