@@ -17,5 +17,5 @@ Feature: Student Register Form
     Then User should register successfully into the portal
 
     Examples: 
-      | Subject |  | Hobbies |  | Address    |
-      | Maths   |  | Sports |  | SBP Mohali |
+      | Subject |  | Hobbies |  | Address  |
+      | Maths   |  | Reading |  | Homeland |

@@ -20,35 +20,36 @@ public class PracticeFormSteps {
 	}
 
 	@Given("User is on registration page {string}")
-	public void user_is_on_registration_page(String str) throws InterruptedException {
-		PracticeFormMethods.launchBrowser(driver, str );
+	public void user_is_on_registration_page(String url) throws InterruptedException {
+		PracticeFormMethods.launchBrowser(driver, url );
+
 
 	}
 
 	@And("User enters firstName as {string}, Last name as {string} and email as {string}")
 	public void enter_and(String fname, String lname, String email) throws Throwable {
-		PracticeFormMethods.enterFnameLnameEmail(driver, fname, lname, email);
+		PracticeFormMethods.enterFnameLnameEmail(driver, fname, lname, email );
 
 	}
 
 	@When("User click on gender as {string}")
-	public void user_click_on_gender_as(String string) throws AWTException {
+	public void user_click_on_gender_as(String gender) throws AWTException {
 		
 		PracticeFormMethods.selectGender(driver);
 
 	}
 
 	@When("Enter Mobile number as {string}")
-	public void enter_mobile_number_as(String mobile) throws InterruptedException {
-		PracticeFormMethods.enterPhone(driver, mobile);
+	public void enter_mobile_number_as(String mobileNumber) throws InterruptedException {
+		PracticeFormMethods.enterPhone(driver, mobileNumber);
 		
 
 	}
 
 	@When("User Enters Subject as {string}, Hobbies as {string}, Select Date and address as {string}")
-	public void enter_date_and(String sub, String hob, String address) throws InterruptedException, AWTException {
-		PracticeFormMethods.enterSubject(driver, sub);
-		PracticeFormMethods.selectHobbies(driver, hob);
+	public void enter_date_and(String subject, String hobbies, String address) throws InterruptedException, AWTException {
+		PracticeFormMethods.enterSubject(driver, subject);
+		PracticeFormMethods.selectHobbies(driver, hobbies);
 		PracticeFormMethods.selectDate(driver);
 		PracticeFormMethods.enteraddress(driver, address);
 

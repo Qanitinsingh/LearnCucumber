@@ -2,6 +2,8 @@ package selenium.alert.frame.window;
 
 import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
@@ -12,6 +14,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import javamethod.PracticeFormMethods;
 import pageobjects.Alerts;
 
 public class HandleAlerts {
@@ -29,19 +32,18 @@ public class HandleAlerts {
 //		driver.manage().deleteAllCookies();
 //	}
 
-	
+	final static Logger logger = LogManager.getLogger(HandleAlerts.class);
+
 	public static void simpleAlert(WebDriver driver) {
 		try {
 			driver.findElement(Alerts.SIMPLE_ALERT).click();
 			driver.switchTo().alert().accept();
 		} catch (NoAlertPresentException e) {
-			// TODO: handle exception
+			logger.info("simpleAlert is not present" + e);
 		}
-		
-
+		logger.info("simpleAlert is present on the page");
 	}
 
-	
 	public static void timerAlertButton(WebDriver driver) throws InterruptedException {
 		try {
 			driver.findElement(Alerts.TIMER_ALERT).click();
@@ -50,10 +52,9 @@ public class HandleAlerts {
 		} catch (NoAlertPresentException e) {
 			// TODO: handle exception
 		}
-		
+
 	}
 
-	
 	public static void confirmAlertButton(WebDriver driver) throws InterruptedException {
 		try {
 			driver.findElement(Alerts.CONFIRM_ALERT).click();
@@ -61,23 +62,19 @@ public class HandleAlerts {
 		} catch (NoAlertPresentException e) {
 			// TODO: handle exception
 		}
-		
 
 	}
 
-	
-	public static void promptAlertButton(WebDriver driver,String str) throws InterruptedException {
+	public static void promptAlertButton(WebDriver driver, String str) throws InterruptedException {
 		try {
 			driver.findElement(Alerts.PROMPT_ALERT).click();
 			driver.switchTo().alert().sendKeys(str);
 			driver.switchTo().alert().accept();
 		} catch (NoAlertPresentException e) {
 			// TODO: handle exception
-		}
-		catch (NoSuchElementException e) {
+		} catch (NoSuchElementException e) {
 			// TODO: handle exception
 		}
-		
 
 //		String matchText = driver.findElement(By.id("promptResult")).getText();
 //		if (matchText.contains(text)) {
@@ -86,7 +83,7 @@ public class HandleAlerts {
 //		} else {
 //			System.out.println("Test fail");
 //		}
-		driver.quit();
+		
 	}
 
 }

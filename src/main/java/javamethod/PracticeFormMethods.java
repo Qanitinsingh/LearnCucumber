@@ -31,9 +31,12 @@ public class PracticeFormMethods {
 	public static void launchBrowser(WebDriver driver, String url) throws InterruptedException {
 		try {
 			driver.get(url);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		} catch (TimeoutException e) {
 			logger.info("URL is taking time to load", e);
+
 		}
+
 		logger.info("Browser is launched successfully");
 	}
 
@@ -41,9 +44,12 @@ public class PracticeFormMethods {
 			throws Throwable {
 		try {
 //driver.findElement(RegisterOR.SIGNUP_FIRSTNAME).sendKeys("Supriya");
-			driver.findElement(PracticeFormOR.FIRSTNAME).sendKeys(fname);
-			driver.findElement(PracticeFormOR.LASTTNAME).sendKeys(lname);
+			driver.findElement(PracticeFormOR.FIRST_NAME).sendKeys(fname);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+			driver.findElement(PracticeFormOR.LAST_NAME).sendKeys(lname);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 			driver.findElement(PracticeFormOR.EMAIL).sendKeys(email);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
 		} catch (NoSuchElementException e) {
 			logger.info("Not able to locate first name , last name and email Text box", e);
@@ -51,11 +57,12 @@ public class PracticeFormMethods {
 			logger.info("TimeoutException in first name , last name and email Text box", e);
 		}
 		logger.info("Values are enetered into first name , last name and email Text box");
+
 	}
 
 	public static void enteraddress(WebDriver driver, String address) throws InterruptedException, AWTException {
 		try {
-			driver.findElement(PracticeFormOR.CURRENTADDRESS).sendKeys(address);
+			driver.findElement(PracticeFormOR.CURRENT_ADDRESS).sendKeys(address);
 
 		} catch (NoSuchElementException e) {
 			logger.info("Unable to locate CURRENTADDRESS on registration form", e);
@@ -69,17 +76,19 @@ public class PracticeFormMethods {
 	public static void enterPhone(WebDriver driver, String Phonenumber) throws InterruptedException {
 		try {
 			driver.findElement(PracticeFormOR.PHONE).sendKeys(Phonenumber);
+
 		} catch (NoSuchElementException e) {
 			System.out.println("Unable to locate element" + e);
 		} catch (TimeoutException e) {
 			e.printStackTrace();
 
 		}
+		logger.info("enterPhone is executed successfully on Student form");
 	}
 
 	public static void selectGender(WebDriver driver) throws AWTException {
 		try {
-
+			
 			WebElement gender = driver.findElement(PracticeFormOR.GENDER_FEMALE);
 
 			Actions actions = new Actions(driver);
@@ -107,6 +116,7 @@ public class PracticeFormMethods {
 
 	public static void enterSubject(WebDriver driver, String sub) throws InterruptedException, AWTException {
 		try {
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 			// Inside DOM
@@ -174,9 +184,7 @@ public class PracticeFormMethods {
 	public static void uploadImage(WebDriver driver) throws InterruptedException {
 		try {
 			WebElement UploadImg = driver.findElement(PracticeFormOR.UPLOAD_IMAGE);
-
 			Thread.sleep(3000);
-
 			UploadImg.sendKeys(new java.io.File(filePath).getAbsolutePath());
 
 			Thread.sleep(3000);

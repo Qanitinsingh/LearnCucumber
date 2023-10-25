@@ -37,12 +37,15 @@ public class Accodian {
 	public static void clickAccodian() throws InterruptedException {
 
 		List<WebElement> accodian = driver.findElements(By.className("card"));
+		
 		Actions actions = new Actions(driver);
 		
 		Iterator<WebElement> iterator = accodian.iterator();
 		while (iterator.hasNext()) {
 			WebElement element = iterator.next();
+		
 			actions.click(element).perform();
+			
 		}
 
 	}

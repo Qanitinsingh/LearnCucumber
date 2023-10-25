@@ -59,11 +59,11 @@ public class PracticeForm {
 			formData.add(3, "8557037939");
 			formData.add(4, "SBP Sec 116 Mohali");
 		
-			driver.findElement(PracticeFormOR.FIRSTNAME).sendKeys(formData.get(0));
-			driver.findElement(PracticeFormOR.LASTTNAME).sendKeys(formData.get(1));
+			driver.findElement(PracticeFormOR.FIRST_NAME).sendKeys(formData.get(0));
+			driver.findElement(PracticeFormOR.LAST_NAME).sendKeys(formData.get(1));
 			driver.findElement(PracticeFormOR.EMAIL).sendKeys(formData.get(2));
 			driver.findElement(PracticeFormOR.PHONE).sendKeys(formData.get(3));
-			driver.findElement(PracticeFormOR.CURRENTADDRESS).sendKeys(formData.get(4));
+			driver.findElement(PracticeFormOR.CURRENT_ADDRESS).sendKeys(formData.get(4));
 
 		} catch (NoSuchElementException e) {
 			System.out.println("Unable to locate element" + e);

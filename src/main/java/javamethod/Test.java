@@ -32,10 +32,10 @@ public class Test {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.findElement(PracticeFormOR.FIRSTNAME).sendKeys(name);
-		driver.findElement(PracticeFormOR.LASTTNAME).sendKeys(lastName);
+		driver.findElement(PracticeFormOR.FIRST_NAME).sendKeys(name);
+		driver.findElement(PracticeFormOR.LAST_NAME).sendKeys(lastName);
 		driver.findElement(PracticeFormOR.EMAIL).sendKeys("Nitin@gmail.com");
-		driver.findElement(PracticeFormOR.CURRENTADDRESS).sendKeys("SBP Mohali");
+		driver.findElement(PracticeFormOR.CURRENT_ADDRESS).sendKeys("SBP Mohali");
 		driver.findElement(PracticeFormOR.PHONE).sendKeys("8557037939");
 		
 		// Select Gender

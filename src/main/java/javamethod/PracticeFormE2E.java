@@ -37,13 +37,14 @@ public class PracticeFormE2E {
 
 	@Test
 	public static void enterData() throws InterruptedException {
-		driver.findElement(PracticeFormOR.FIRSTNAME).sendKeys("Nitin");
-		driver.findElement(PracticeFormOR.LASTTNAME).sendKeys("Singh");
+
+		driver.findElement(PracticeFormOR.FIRST_NAME).sendKeys("Nitin");
+		driver.findElement(PracticeFormOR.LAST_NAME).sendKeys("Singh");
 		driver.findElement(PracticeFormOR.EMAIL).sendKeys("Nitin@gmail.com");
-		driver.findElement(PracticeFormOR.CURRENTADDRESS).sendKeys("SBP Mohali");
+		driver.findElement(PracticeFormOR.CURRENT_ADDRESS).sendKeys("SBP Mohali");
 		driver.findElement(PracticeFormOR.PHONE).sendKeys("8557037939");
 		// Select Gender
-		WebElement gender = driver.findElement(PracticeFormOR.GENDER_FEMALE);
+		WebElement gender = driver.findElement(PracticeFormOR.GENDER_OTHERS);
 
 		Actions actions = new Actions(driver);
 		actions.moveToElement(gender).click().build().perform();
@@ -107,6 +108,8 @@ public class PracticeFormE2E {
 
 		Thread.sleep(1000);
 		actions.moveToElement(confirm).click().build().perform();
+		
+		driver.quit();
 	}
 
 }

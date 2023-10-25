@@ -36,4 +36,9 @@ Feature: Add to cart testing
     Examples: 
       | FirstName |  | LastName |  | BillingAddress |  | ShippingAddress |  | Zip    |
       | Nitin     |  | Singh    |  | SBP            |  | Mohali          |  | 160063 |
+      | Nitin     |  |     |  |             |  | Mohali          |  | 160063 |
+      | Nitin     |  | Singh    |  | SBP            |  |           |  |  |
+      | Nitin     |  |     |  | SBP            |  |           |  | 160063 |
+      | Nitin     |  | Singh    |  | SBP            |  |           |  | 160063 |
+      | Nitin     |  | Singh    |  |             |  | Mohali          |  | 16006323455454 |
      

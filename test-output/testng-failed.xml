@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="demo.selenium.FirstLaunch">
+      <class name="selenium.alert.frame.window.TabsAndWindow">
         <methods>
-          <include name="matchHeading"/>
+          <include name="newwindow"/>
+          <include name="newTab"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- demo.selenium.FirstLaunch -->
+      </class> <!-- selenium.alert.frame.window.TabsAndWindow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

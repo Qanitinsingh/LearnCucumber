@@ -1,0 +1,1 @@
+{"uuid":"3c196125-d4a7-48fe-8958-6945d7eef8c0","name":"Default test","children":["0354ee00-633f-429d-9273-03a3803ed118"],"befores":[{"name":"checkDockerInstalled","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1693288613638,"stop":1693288615337}],"afters":[],"start":1693288613586,"stop":1693288707494}
