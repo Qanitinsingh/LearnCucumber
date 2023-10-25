@@ -4,7 +4,6 @@
 	<artifactId>CucumberLearn</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
-
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
