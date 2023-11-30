@@ -6,7 +6,11 @@
       <class name="runner.RunCuke">
         <methods>
           <include name="setUpClass"/>
+<<<<<<< HEAD
           <include name="runScenario" invocation-numbers="0"/>
+=======
+          <include name="runScenario" invocation-numbers="0 1"/>
+>>>>>>> branch 'master' of https://github.com/Qanitinsingh/LearnCucumber.git
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- runner.RunCuke -->

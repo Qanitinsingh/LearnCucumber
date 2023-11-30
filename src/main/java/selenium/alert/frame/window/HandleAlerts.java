@@ -44,7 +44,11 @@ public class HandleAlerts {
 		logger.info("simpleAlert is present on the page");
 	}
 
-	public static  void timerAlertButton(WebDriver driver) throws InterruptedException {
+
+	
+
+	public static void timerAlertButton(WebDriver driver) throws InterruptedException {
+
 		try {
 			driver.findElement(Alerts.TIMER_ALERT).click();
 			Thread.sleep(6000);

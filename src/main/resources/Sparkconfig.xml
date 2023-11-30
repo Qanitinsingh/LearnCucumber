@@ -19,7 +19,11 @@
 		<!-- report name - displayed at top-nav -->
 		<reportName>Automation Report</reportName>
 		 <![CDATA[
+<<<<<<< HEAD
                 <img src='CucumberLearn/TestData/logo-final-color.png'/>
+=======
+                <img src='your-image-path' />
+>>>>>>> branch 'master' of https://github.com/Qanitinsingh/LearnCucumber.git
             ]]>
 
 		<!-- view report without internet -->
