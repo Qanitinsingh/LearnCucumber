@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+	<configuration>
+		<!-- report theme -->
+		<!-- standard, dark -->
+		<theme>dark</theme>
+
+		<!-- document encoding -->
+		<!-- defaults to UTF-8 -->
+		<encoding>UTF-8</encoding>
+
+		<!-- protocol for script and stylesheets -->
+		<!-- defaults to https -->
+		<protocol>https</protocol>
+
+		<!-- title of the document -->
+		<documentTitle>Cucumber</documentTitle>
+
+		<!-- report name - displayed at top-nav -->
+		<reportName>Automation Report</reportName>
+		 <![CDATA[
+                <img src='CucumberLearn/TestData/logo-final-color.png'/>
+            ]]>
+
+		<!-- view report without internet -->
+		<offlineMode>false</offlineMode>
+
+		<!-- custom javascript -->
+		<scripts>
+			<![CDATA[
+                $(document).ready(function() {
+   					 $(".logo-content").hide();
+   					  <img src='.//TestData//logo-final-color.png' />
+   					 $(".logo-container").html("Nitin");});]]>
+		</scripts>
+		<!-- custom styles -->
+		<css></css>
+	</configuration>
+</extentreports>
